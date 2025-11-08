@@ -71,7 +71,7 @@ const bookContent = {
         
         <p>Now you're talking to me.</p>
         
-        <p>Listen, <span class="emphasis">be wary of letting pirates board your ship.</span></p>
+        <p>Listen,  <span class="emphasis">be wary of letting pirates board your ship.</span></p>
         
         <p>We ask inconvenient questions.</p>
         
@@ -133,4 +133,5 @@ const bookContent = {
     // (Technical: Return segment object by ID)
     return this.screens.find(screen => screen.id === id);
   },
+
 };
