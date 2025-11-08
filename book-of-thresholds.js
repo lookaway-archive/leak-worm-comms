@@ -1,6 +1,6 @@
 /**
  * ============================================
- * SPECIMEN: LEAK-WORM-847T
+ * SPECIMEN: SPECIMEN: ANGLERFISH-COMM-v1001
  * ORGAN: CONTENT PHEROMONES
  * RETRIEVAL: November 2025, Tlönian Research Facility
  * ============================================
@@ -63,15 +63,13 @@ const bookContent = {
       title: "THE CAPTAIN'S COMMUNICATION",
       subtitle: "THE ANGLERFISH DINGY Motion Investigation Vessel",
       content: `
-        <div class="title-dot"><span class="blink-dot"></span></div>
-        
         <p>≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋</p>
         
         <p>I see the first mate did his job～charmed you with his fancy words and professional credentials.</p>
         
         <p>Now you're talking to me.</p>
         
-        <p>Listen,  <span class="emphasis">be wary of letting pirates board your ship.</span></p>
+        <p>Listen, <span class="emphasis">be wary of letting pirates board your ship.</span></p>
         
         <p>We ask inconvenient questions.</p>
         
@@ -133,5 +131,4 @@ const bookContent = {
     // (Technical: Return segment object by ID)
     return this.screens.find(screen => screen.id === id);
   },
-
 };
