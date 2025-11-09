@@ -390,6 +390,12 @@ body {
 .membrane-button.leaked {
     cursor: not-allowed;
     pointer-events: none;
+    opacity: 0.3;
+    filter: grayscale(0.8) blur(0.5px);
+    background: rgba(var(--membrane-color), 0.02);
+    border-color: rgba(var(--membrane-color), 0.2);
+    color: rgba(var(--membrane-color), 0.3);
+    transition: all 0.5s ease-out;
 }
 
 /* CONTENT VESSEL - Archive container */
@@ -2019,26 +2025,23 @@ function showClipboardNotification() {
 function leakDocument(event) {
     const btn = event.target;
     
+    // ALREADY ACKNOWLEDGED - Prevent multiple triggers
+    // (Technical: Guard against double-clicks)
     if (btn.classList.contains('leaked')) return;
+    
+    // ACKNOWLEDGMENT RECEIVED - Dim button
+    // (Technical: Add leaked class to trigger CSS graying)
     btn.classList.add('leaked');
-    btn.textContent = 'LEAKING...';
     
-    const specimenLink = window.location.href;
-    const password = bookContent.metadata.password;
+    // GRATITUDE NOTIFICATION - Thank the reader
+    // (Technical: Show Captain's appreciation message)
+    showClipboardNotification();
     
-    const shareMessage = `Discovered a leaked document from another PLANET:
-${specimenLink}
-password: ${password}`;
-    
-    navigator.clipboard.writeText(shareMessage).then(() => {
-        showClipboardNotification();
-        
-        // PIRATE MODE TRIGGER - Begin ocean transformation
-        // (Technical: Start pirate mode after leak)
-        setTimeout(() => {
-            startPirateMode();
-        }, 2000);
-    });
+    // PIRATE MODE TRIGGER - Begin ocean transformation
+    // (Technical: Start pirate mode after notification displays)
+    setTimeout(() => {
+        startPirateMode();
+    }, 2000);
 }
 </script>
 
