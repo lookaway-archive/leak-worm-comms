@@ -17,21 +17,11 @@ FUNCTION: Complete skeletal framework and visual cortex
 DEPENDENCIES: All JavaScript organs must be loaded in sequence
 
 SURGICAL NOTES:
-This is the specimen's complete anatomy - the HTML skeleton provides
-structural support, the CSS visual cortex generates phosphor emissions,
-and the inline JavaScript creates reflexive responses to stimuli.
-
-The organism manifests as a living CRT display, breathing through
-opacity cycles, scanning with its electron beam eye, and gradually
-decaying when deprived of user interaction. Death is natural and
-graceful. Ocean metamorphosis represents transcendence.
-
-Critical structure:
-- Password membrane: Security gate requiring "anthropic"
-- Content vessel: Application video in CRT frame
-- Death screen: Terminal state display
-- Reward screen: Ocean meditation achievement
-- Decay cascade: CSS variables propagate visual degradation
+Password membrane REMOVED — direct entry for application submission.
+Content vessel: Application video in CRT frame.
+Death screen: Terminal state display.
+Reward screen: Ocean meditation achievement.
+Decay cascade: CSS variables propagate visual degradation.
 
 The specimen requires 12 minutes to complete its natural lifecycle
 from birth through death, though user interaction resets the decay.
@@ -44,7 +34,6 @@ from birth through death, though user interaction resets the decay.
    ============================================ */
 
 :root {
-    /* CHROMATIC DNA - Color genetics */
     --core-r: 122;
     --core-g: 31;
     --core-b: 8;
@@ -55,61 +44,40 @@ from birth through death, though user interaction resets the decay.
     --text-g: 120;
     --text-b: 70;
     --text-opacity: 1.0;
-    
-    /* ELECTRON BEAM - Scanning parameters */
     --beam-color-r: 229;
     --beam-color-g: 62;
     --beam-color-b: 44;
     --beam-speed: 8s;
     --beam-start-position: 0%;
-    
-    /* DANGER SIGNALS - Warning coloration */
     --danger-r: 200;
     --danger-g: 30;
     --danger-b: 30;
-    
-    /* ATMOSPHERIC DENSITY - Particle opacity */
     --particle-base-opacity: 0.06;
     --particle-decay-multiplier: 1.0;
-    
-    /* RESPIRATORY RHYTHM - Breathing cycle */
     --breathing-speed: 6s;
     --breathing-opacity-min: 0.7;
     --breathing-opacity-max: 0.85;
-    
-    /* PERIPHERAL VISION - Edge darkness */
     --vignette-radius: 85%;
     --vignette-opacity: 0.02;
-    
-    /* SCAN LINES - CRT refresh */
     --scanline-opacity: 0.15;
     --scanline-speed: 2.5s;
-    
-    /* PHOSPHOR GLOW - Text emission */
     --text-glow-spread: 40px;
     --text-glow-intensity: 0.3;
     --pirate-glow-spread: 45px;
     --pirate-glow-intensity: 0.4;
-    
-    /* MEMBRANE PROPERTIES - Interface boundaries */
     --membrane-color: 229, 62, 44;
     --membrane-border-width: 1px;
     --membrane-radius: 3px;
     --membrane-transition: 0.3s;
     --membrane-font: 'Courier New', monospace;
     --membrane-letter-spacing: 2px;
-    
-    /* OPTICAL BLUR - Focus degradation */
     --text-title-blur: 0.3px;
     --text-body-blur: 0.2px;
     --text-beam-blur: 0px;
-    
-    /* POWER FLUCTUATION - Voltage instability */
     --flicker-speed: 0.3s;
     --flicker-brightness: 1.0;
 }
 
-/* TERMINAL7 WAVE FONT - Sigil rendering */
 @font-face {
     font-family: 'Terminal7Wave';
     src: url('Terminal7Wave-Regular.ttf') format('truetype');
@@ -121,7 +89,6 @@ from birth through death, though user interaction resets the decay.
     letter-spacing: 0;
 }
 
-/* VIDEO VESSEL - Embedded player container */
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -154,7 +121,6 @@ body {
     user-select: none;
 }
 
-/* CRT PHOSPHOR GLOW - Primary organism emission */
 .crt {
     position: fixed;
     inset: 0;
@@ -184,7 +150,6 @@ body {
     }
 }
 
-/* ELECTRON SCAN LINES - CRT refresh simulation */
 .scanlines {
     position: fixed;
     top: -100px;
@@ -209,7 +174,6 @@ body {
     to { transform: translateY(4px); }
 }
 
-/* VIGNETTE - Peripheral vision decay */
 .vignette {
     position: fixed;
     top: 0;
@@ -225,7 +189,6 @@ body {
     z-index: 4;
 }
 
-/* ATMOSPHERIC BOUNDARIES - Edge blur effects */
 .fade-top {
     position: fixed;
     top: 0;
@@ -280,46 +243,23 @@ body {
     );
 }
 
-/* Mobile adjustments - more focus zone */
 @media (max-width: 768px) {
     .fade-top {
         height: 25vh;
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
-        background: linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0.3) 0%,
-            rgba(0, 0, 0, 0.1) 40%,
-            transparent 100%
-        );
-        mask-image: linear-gradient(
-            to bottom,
-            black 0%,
-            rgba(0, 0, 0, 0.6) 50%,
-            transparent 100%
-        );
+        background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 40%, transparent 100%);
+        mask-image: linear-gradient(to bottom, black 0%, rgba(0,0,0,0.6) 50%, transparent 100%);
     }
-    
     .fade-bottom {
         height: 20vh;
         backdrop-filter: blur(6px);
         -webkit-backdrop-filter: blur(6px);
-        background: linear-gradient(
-            to top,
-            rgba(0, 0, 0, 0.2) 0%,
-            rgba(0, 0, 0, 0.05) 50%,
-            transparent 100%
-        );
-        mask-image: linear-gradient(
-            to top,
-            black 0%,
-            rgba(0, 0, 0, 0.5) 50%,
-            transparent 100%
-        );
+        background: linear-gradient(to top, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.05) 50%, transparent 100%);
+        mask-image: linear-gradient(to top, black 0%, rgba(0,0,0,0.5) 50%, transparent 100%);
     }
 }
 
-/* PASSWORD MEMBRANE - Security barrier */
 .password-gate {
     position: relative;
     text-align: center;
@@ -341,17 +281,12 @@ body {
     color: rgb(var(--text-r), var(--text-g), var(--text-b));
     text-transform: uppercase;
     letter-spacing: 3px;
-    text-shadow: 
-        0 0 6px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 1.0),
-        0 0 12px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 0.9),
-        0 0 24px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 0.7),
-        0 0 48px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 0.5);
+    text-shadow: 0 0 6px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 1.0), 0 0 12px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 0.9), 0 0 24px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 0.7), 0 0 48px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 0.5);
     filter: blur(var(--text-title-blur)) brightness(var(--flicker-brightness));
     animation: title-flicker var(--flicker-speed) infinite;
     opacity: var(--text-opacity);
 }
 
-/* FLICKER ANIMATIONS - Power instability simulation */
 @keyframes title-flicker {
     0%, 100% { opacity: 1; }
     3% { opacity: 0.55; }
@@ -428,7 +363,6 @@ body {
     transition: all 0.5s ease-out;
 }
 
-/* CONTENT VESSEL - Archive container */
 .page-container {
     position: fixed;
     top: 0;
@@ -464,7 +398,6 @@ body {
     text-align: center;
 }
 
-/* CONTENT SEGMENTS - Archive sections */
 .screen-section {
     width: 100%;
     max-width: 700px;
@@ -506,18 +439,13 @@ body {
     align-items: center;
 }
 
-/* TEXT HIERARCHY - Phosphor emission levels */
 .screen-title {
     font-size: 19px;
     color: rgb(var(--text-r), var(--text-g), var(--text-b));
     text-transform: uppercase;
     letter-spacing: 4px;
     margin-bottom: 15px;
-    text-shadow: 
-        0 0 6px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 1.0),
-        0 0 12px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 0.9),
-        0 0 24px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 0.7),
-        0 0 48px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 0.5);
+    text-shadow: 0 0 6px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 1.0), 0 0 12px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 0.9), 0 0 24px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 0.7), 0 0 48px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 0.5);
     filter: blur(var(--text-title-blur)) brightness(var(--flicker-brightness));
     animation: title-flicker var(--flicker-speed) infinite;
     opacity: var(--text-opacity);
@@ -525,28 +453,11 @@ body {
 
 .screen-subtitle {
     font-size: 14px;
-    color: rgba(
-        calc(var(--text-r) * 0.78), 
-        calc(var(--text-g) * 0.78), 
-        calc(var(--text-b) * 0.78), 
-        0.9
-    );
+    color: rgba(calc(var(--text-r) * 0.78), calc(var(--text-g) * 0.78), calc(var(--text-b) * 0.78), 0.9);
     font-style: italic;
     margin-bottom: 40px;
     letter-spacing: 2px;
-    text-shadow: 
-        0 0 4px rgba(
-            calc(var(--glow-r) * 0.78), 
-            calc(var(--glow-g) * 0.78), 
-            calc(var(--glow-b) * 0.78), 
-            0.7
-        ),
-        0 0 10px rgba(
-            calc(var(--glow-r) * 0.78), 
-            calc(var(--glow-g) * 0.78), 
-            calc(var(--glow-b) * 0.78), 
-            0.4
-        );
+    text-shadow: 0 0 4px rgba(calc(var(--glow-r) * 0.78), calc(var(--glow-g) * 0.78), calc(var(--glow-b) * 0.78), 0.7), 0 0 10px rgba(calc(var(--glow-r) * 0.78), calc(var(--glow-g) * 0.78), calc(var(--glow-b) * 0.78), 0.4);
     filter: blur(var(--text-body-blur)) brightness(var(--flicker-brightness));
     opacity: var(--text-opacity);
 }
@@ -558,15 +469,11 @@ body {
     font-family: 'Courier New', monospace;
     letter-spacing: 1px;
     text-align: center;
-    text-shadow: 
-        0 0 2px rgba(var(--text-r), var(--text-g), var(--text-b), 0.7),
-        0 0 6px rgba(var(--text-r), var(--text-g), var(--text-b), var(--text-glow-intensity));
+    text-shadow: 0 0 2px rgba(var(--text-r), var(--text-g), var(--text-b), 0.7), 0 0 6px rgba(var(--text-r), var(--text-g), var(--text-b), var(--text-glow-intensity));
     opacity: var(--text-opacity);
 }
 
-.screen-content p {
-    margin: 20px 0;
-}
+.screen-content p { margin: 20px 0; }
 
 .sentence {
     filter: blur(var(--text-body-blur)) brightness(var(--flicker-brightness));
@@ -575,28 +482,11 @@ body {
 
 .sub-subtitle {
     font-size: 11px;
-    color: rgba(
-        calc(var(--text-r) * 0.78), 
-        calc(var(--text-g) * 0.78), 
-        calc(var(--text-b) * 0.78), 
-        0.85
-    );
+    color: rgba(calc(var(--text-r) * 0.78), calc(var(--text-g) * 0.78), calc(var(--text-b) * 0.78), 0.85);
     text-transform: uppercase;
     letter-spacing: 3px;
     margin: 35px 0 12px 0;
-    text-shadow: 
-        0 0 3px rgba(
-            calc(var(--glow-r) * 0.78), 
-            calc(var(--glow-g) * 0.78), 
-            calc(var(--glow-b) * 0.78), 
-            0.6
-        ),
-        0 0 8px rgba(
-            calc(var(--glow-r) * 0.78), 
-            calc(var(--glow-g) * 0.78), 
-            calc(var(--glow-b) * 0.78), 
-            0.35
-        );
+    text-shadow: 0 0 3px rgba(calc(var(--glow-r) * 0.78), calc(var(--glow-g) * 0.78), calc(var(--glow-b) * 0.78), 0.6), 0 0 8px rgba(calc(var(--glow-r) * 0.78), calc(var(--glow-g) * 0.78), calc(var(--glow-b) * 0.78), 0.35);
     filter: blur(var(--text-body-blur)) brightness(var(--flicker-brightness));
     font-weight: 600;
     opacity: var(--text-opacity);
@@ -605,32 +495,14 @@ body {
 .detail-text {
     font-size: 13px;
     line-height: 1.5;
-    color: rgba(
-        calc(var(--text-r) * 0.70), 
-        calc(var(--text-g) * 0.70), 
-        calc(var(--text-b) * 0.70), 
-        0.8
-    );
+    color: rgba(calc(var(--text-r) * 0.70), calc(var(--text-g) * 0.70), calc(var(--text-b) * 0.70), 0.8);
     letter-spacing: 0.5px;
-    text-shadow: 
-        0 0 3px rgba(
-            calc(var(--glow-r) * 0.70), 
-            calc(var(--glow-g) * 0.70), 
-            calc(var(--glow-b) * 0.70), 
-            0.5
-        ),
-        0 0 6px rgba(
-            calc(var(--glow-r) * 0.70), 
-            calc(var(--glow-g) * 0.70), 
-            calc(var(--glow-b) * 0.70), 
-            0.25
-        );
+    text-shadow: 0 0 3px rgba(calc(var(--glow-r) * 0.70), calc(var(--glow-g) * 0.70), calc(var(--glow-b) * 0.70), 0.5), 0 0 6px rgba(calc(var(--glow-r) * 0.70), calc(var(--glow-g) * 0.70), calc(var(--glow-b) * 0.70), 0.25);
     filter: blur(var(--text-body-blur)) brightness(var(--flicker-brightness));
     font-style: italic;
     opacity: var(--text-opacity);
 }
 
-/* CORRUPTION MARKERS - Pirate infiltration */
 .pirate-comment {
     display: block;
     margin: 25px 0;
@@ -638,10 +510,7 @@ body {
     font-style: italic;
     font-size: 15px;
     color: rgb(var(--danger-r), var(--danger-g), var(--danger-b));
-    text-shadow: 
-        0 0 6px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 1.0),
-        0 0 14px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 0.8),
-        0 0 28px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 0.6);
+    text-shadow: 0 0 6px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 1.0), 0 0 14px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 0.8), 0 0 28px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 0.6);
     filter: blur(var(--text-body-blur)) brightness(var(--flicker-brightness));
     animation: cp-pulse 2.5s ease-in-out infinite, cp-flicker var(--flicker-speed) infinite;
     opacity: var(--text-opacity);
@@ -666,7 +535,6 @@ body {
     93% { opacity: 1; }
 }
 
-/* EMPHASIS MARKERS - Important data */
 .callout-text {
     color: rgba(var(--text-r), var(--text-g), var(--text-b), 0.95);
     font-weight: 600;
@@ -675,14 +543,7 @@ body {
 }
 
 @media (max-width: 768px) {
-    .callout-text {
-        font-weight: 700;
-        font-size: 1.05em;
-        letter-spacing: 1px;
-        text-shadow: 
-            0 0 4px rgba(var(--text-r), var(--text-g), var(--text-b), 0.6),
-            0 0 10px rgba(var(--text-r), var(--text-g), var(--text-b), 0.4);
-    }
+    .callout-text { font-weight: 700; font-size: 1.05em; letter-spacing: 1px; text-shadow: 0 0 4px rgba(var(--text-r), var(--text-g), var(--text-b), 0.6), 0 0 10px rgba(var(--text-r), var(--text-g), var(--text-b), 0.4); }
 }
 
 .equation-label {
@@ -693,39 +554,21 @@ body {
 }
 
 @media (max-width: 768px) {
-    .equation-label {
-        font-weight: 700;
-        text-shadow: 
-            0 0 10px rgba(var(--text-r), var(--text-g), var(--text-b), 0.7),
-            0 0 16px rgba(var(--text-r), var(--text-g), var(--text-b), 0.4);
-    }
+    .equation-label { font-weight: 700; text-shadow: 0 0 10px rgba(var(--text-r), var(--text-g), var(--text-b), 0.7), 0 0 16px rgba(var(--text-r), var(--text-g), var(--text-b), 0.4); }
 }
 
 .parenthetical {
-    color: rgba(
-        calc(var(--text-r) * 0.70), 
-        calc(var(--text-g) * 0.70), 
-        calc(var(--text-b) * 0.70), 
-        0.65
-    );
+    color: rgba(calc(var(--text-r) * 0.70), calc(var(--text-g) * 0.70), calc(var(--text-b) * 0.70), 0.65);
     font-size: 0.95em;
     font-style: italic;
-    text-shadow: 0 0 2px rgba(
-        calc(var(--glow-r) * 0.70), 
-        calc(var(--glow-g) * 0.70), 
-        calc(var(--glow-b) * 0.70), 
-        0.3
-    );
+    text-shadow: 0 0 2px rgba(calc(var(--glow-r) * 0.70), calc(var(--glow-g) * 0.70), calc(var(--glow-b) * 0.70), 0.3);
 }
 
 .redacted-text {
     color: rgb(var(--danger-r), var(--danger-g), var(--danger-b));
     font-weight: 700;
     letter-spacing: 1px;
-    text-shadow: 
-        0 0 6px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 1.0),
-        0 0 12px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 0.8),
-        0 0 24px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 0.5);
+    text-shadow: 0 0 6px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 1.0), 0 0 12px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 0.8), 0 0 24px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 0.5);
     filter: blur(var(--text-body-blur)) brightness(var(--flicker-brightness));
     animation: redacted-flicker var(--flicker-speed) infinite, redacted-pulse 3s ease-in-out infinite;
 }
@@ -740,18 +583,8 @@ body {
 }
 
 @keyframes redacted-pulse {
-    0%, 100% { 
-        text-shadow: 
-            0 0 6px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 1.0),
-            0 0 12px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 0.8),
-            0 0 24px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 0.5);
-    }
-    50% { 
-        text-shadow: 
-            0 0 8px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 1.0),
-            0 0 16px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 0.9),
-            0 0 32px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 0.6);
-    }
+    0%, 100% { text-shadow: 0 0 6px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 1.0), 0 0 12px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 0.8), 0 0 24px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 0.5); }
+    50% { text-shadow: 0 0 8px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 1.0), 0 0 16px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 0.9), 0 0 32px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 0.6); }
 }
 
 .list-item {
@@ -774,28 +607,17 @@ body {
 }
 
 @media (max-width: 768px) {
-    .emphasis {
-        font-weight: 700;
-        text-shadow: 
-            0 0 8px rgba(var(--text-r), var(--text-g), var(--text-b), 0.6),
-            0 0 14px rgba(var(--text-r), var(--text-g), var(--text-b), 0.4);
-    }
+    .emphasis { font-weight: 700; text-shadow: 0 0 8px rgba(var(--text-r), var(--text-g), var(--text-b), 0.6), 0 0 14px rgba(var(--text-r), var(--text-g), var(--text-b), 0.4); }
 }
 
-.no-break {
-    white-space: nowrap;
-    display: inline-block;
-}
+.no-break { white-space: nowrap; display: inline-block; }
 
 .final-mystery {
     color: rgb(var(--text-r), var(--text-g), var(--text-b));
     font-weight: 800;
     font-size: 1.2em;
     letter-spacing: 2px;
-    text-shadow: 
-        0 0 10px rgba(var(--text-r), var(--text-g), var(--text-b), 0.9),
-        0 0 20px rgba(var(--text-r), var(--text-g), var(--text-b), 0.6),
-        0 0 30px rgba(var(--text-r), var(--text-g), var(--text-b), 0.3);
+    text-shadow: 0 0 10px rgba(var(--text-r), var(--text-g), var(--text-b), 0.9), 0 0 20px rgba(var(--text-r), var(--text-g), var(--text-b), 0.6), 0 0 30px rgba(var(--text-r), var(--text-g), var(--text-b), 0.3);
 }
 
 .quote {
@@ -812,7 +634,6 @@ body {
     filter: blur(var(--text-body-blur)) brightness(var(--flicker-brightness));
 }
 
-/* PHOSPHOR INDICATORS - Visual pulses */
 .blink-dot {
     display: inline-block;
     width: 12px;
@@ -830,21 +651,9 @@ body {
     50% { filter: opacity(1); transform: scale(1.2); }
 }
 
-.title-dot {
-    display: block;
-    text-align: center;
-    margin-bottom: 80px;
-}
-
-.end-dot {
-    display: block;
-    text-align: center;
-    margin-top: 80px;
-}
-
-.hidden {
-    display: none;
-}
+.title-dot { display: block; text-align: center; margin-bottom: 80px; }
+.end-dot { display: block; text-align: center; margin-top: 80px; }
+.hidden { display: none; }
 
 @keyframes shake {
     0%, 100% { transform: translateX(0); }
@@ -852,7 +661,6 @@ body {
     75% { transform: translateX(5px); }
 }
 
-/* DEATH SCREEN - Terminal display */
 .death-screen {
     position: relative;
     text-align: center;
@@ -894,9 +702,7 @@ body {
     letter-spacing: 4px;
     text-align: center;
     padding: 40px;
-    text-shadow: 
-        0 0 4px rgba(var(--text-r), var(--text-g), var(--text-b), 0.7),
-        0 0 10px rgba(var(--text-r), var(--text-g), var(--text-b), 0.4);
+    text-shadow: 0 0 4px rgba(var(--text-r), var(--text-g), var(--text-b), 0.7), 0 0 10px rgba(var(--text-r), var(--text-g), var(--text-b), 0.4);
     filter: blur(1.5px);
     animation: title-flicker 0.3s infinite;
     opacity: 0;
@@ -905,24 +711,12 @@ body {
 .death-subtitle {
     display: block;
     font-size: 14px;
-    color: rgba(
-        calc(var(--text-r) * 0.78), 
-        calc(var(--text-g) * 0.78), 
-        calc(var(--text-b) * 0.78), 
-        0.7
-    );
+    color: rgba(calc(var(--text-r) * 0.78), calc(var(--text-g) * 0.78), calc(var(--text-b) * 0.78), 0.7);
     letter-spacing: 2px;
     margin-top: 20px;
-    text-shadow: 
-        0 0 3px rgba(
-            calc(var(--glow-r) * 0.78), 
-            calc(var(--glow-g) * 0.78), 
-            calc(var(--glow-b) * 0.78), 
-            0.5
-        );
+    text-shadow: 0 0 3px rgba(calc(var(--glow-r) * 0.78), calc(var(--glow-g) * 0.78), calc(var(--glow-b) * 0.78), 0.5);
 }
 
-/* REWARD SCREEN - Ocean achievement */
 .reward-screen {
     position: relative;
     text-align: center;
@@ -970,10 +764,7 @@ body {
     color: rgb(var(--text-r), var(--text-g), var(--text-b));
     text-transform: uppercase;
     letter-spacing: 5px;
-    text-shadow: 
-        0 0 8px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 1.0),
-        0 0 16px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 0.8),
-        0 0 32px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 0.6);
+    text-shadow: 0 0 8px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 1.0), 0 0 16px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 0.8), 0 0 32px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 0.6);
     animation: title-flicker 0.3s infinite;
     opacity: 0;
     filter: blur(0px);
@@ -1013,7 +804,6 @@ body {
     opacity: 0;
 }
 
-/* CLIPBOARD NOTIFICATION - Data leak confirmation */
 #clipboardNotification {
     position: fixed;
     top: 50%;
@@ -1026,10 +816,7 @@ body {
     text-transform: uppercase;
     text-align: center;
     color: rgb(220, 240, 255);
-    text-shadow: 
-        0 0 10px rgba(0, 200, 255, 1.0),
-        0 0 20px rgba(0, 200, 255, 0.8),
-        0 0 40px rgba(0, 200, 255, 0.5);
+    text-shadow: 0 0 10px rgba(0, 200, 255, 1.0), 0 0 20px rgba(0, 200, 255, 0.8), 0 0 40px rgba(0, 200, 255, 0.5);
     z-index: 500;
     display: none;
     opacity: 0;
@@ -1039,9 +826,7 @@ body {
     background: rgba(0, 30, 50, 0.95);
     border: 1px solid rgba(0, 200, 255, 0.6);
     border-radius: 3px;
-    box-shadow: 
-        0 0 30px rgba(0, 100, 150, 0.5),
-        inset 0 0 20px rgba(0, 200, 255, 0.1);
+    box-shadow: 0 0 30px rgba(0, 100, 150, 0.5), inset 0 0 20px rgba(0, 200, 255, 0.1);
     max-width: 85vw;
     line-height: 1.5;
 }
@@ -1059,7 +844,6 @@ body {
     .screen-content { font-size: 15px; }
 }
 
-/* ELECTRON BEAM - Visual scanning system */
 .beam-system {
     position: fixed;
     width: 100%;
@@ -1075,13 +859,7 @@ body {
     width: 100%;
     height: 2px;
     left: 0;
-    background: linear-gradient(to right,
-        transparent 0%,
-        rgba(var(--beam-color-r), var(--beam-color-g), var(--beam-color-b), 0.03) 10%,
-        rgba(var(--beam-color-r), var(--beam-color-g), var(--beam-color-b), 0.06) 50%,
-        rgba(var(--beam-color-r), var(--beam-color-g), var(--beam-color-b), 0.03) 90%,
-        transparent 100%
-    );
+    background: linear-gradient(to right, transparent 0%, rgba(var(--beam-color-r), var(--beam-color-g), var(--beam-color-b), 0.03) 10%, rgba(var(--beam-color-r), var(--beam-color-g), var(--beam-color-b), 0.06) 50%, rgba(var(--beam-color-r), var(--beam-color-g), var(--beam-color-b), 0.03) 90%, transparent 100%);
     animation: beam-scan var(--beam-speed) linear infinite;
 }
 
@@ -1091,11 +869,7 @@ body {
     height: 12px;
     left: 0;
     transform: translateY(-5px);
-    background: linear-gradient(to right,
-        transparent 20%,
-        rgba(var(--beam-color-r), var(--beam-color-g), var(--beam-color-b), 0.04) 50%,
-        transparent 80%
-    );
+    background: linear-gradient(to right, transparent 20%, rgba(var(--beam-color-r), var(--beam-color-g), var(--beam-color-b), 0.04) 50%, transparent 80%);
     filter: blur(4px);
     animation: beam-scan var(--beam-speed) linear infinite;
     opacity: 0.15;
@@ -1112,67 +886,39 @@ body {
     width: 100%;
     height: 1px;
     left: 0;
-    background: linear-gradient(to right,
-        transparent 45%,
-        rgba(var(--beam-color-r), calc(var(--beam-color-g) * 1.5), var(--beam-color-b), 0.025) 48%,
-        rgba(var(--beam-color-r), calc(var(--beam-color-g) * 1.8), calc(var(--beam-color-b) * 0.5), 0.05) 50%,
-        rgba(var(--beam-color-r), calc(var(--beam-color-g) * 1.5), var(--beam-color-b), 0.025) 52%,
-        transparent 55%
-    );
+    background: linear-gradient(to right, transparent 45%, rgba(var(--beam-color-r), calc(var(--beam-color-g) * 1.5), var(--beam-color-b), 0.025) 48%, rgba(var(--beam-color-r), calc(var(--beam-color-g) * 1.8), calc(var(--beam-color-b) * 0.5), 0.05) 50%, rgba(var(--beam-color-r), calc(var(--beam-color-g) * 1.5), var(--beam-color-b), 0.025) 52%, transparent 55%);
     animation: beam-scan var(--beam-speed) linear infinite;
     opacity: 0.1;
     transition: opacity 0.05s;
 }
 
 .beam-hotspot.active {
-    background: linear-gradient(to right,
-        transparent 45%,
-        rgba(var(--beam-color-r), calc(var(--beam-color-g) * 1.8), calc(var(--beam-color-b) * 0.3), 0.1) 48%,
-        rgba(var(--beam-color-r), calc(var(--beam-color-g) * 2.2), calc(var(--beam-color-b) * 0.2), 0.3) 50%,
-        rgba(var(--beam-color-r), calc(var(--beam-color-g) * 1.8), calc(var(--beam-color-b) * 0.3), 0.1) 52%,
-        transparent 55%
-    ) !important;
+    background: linear-gradient(to right, transparent 45%, rgba(var(--beam-color-r), calc(var(--beam-color-g) * 1.8), calc(var(--beam-color-b) * 0.3), 0.1) 48%, rgba(var(--beam-color-r), calc(var(--beam-color-g) * 2.2), calc(var(--beam-color-b) * 0.2), 0.3) 50%, rgba(var(--beam-color-r), calc(var(--beam-color-g) * 1.8), calc(var(--beam-color-b) * 0.3), 0.1) 52%, transparent 55%) !important;
     opacity: 0.3;
     filter: blur(0.3px);
 }
 
 @keyframes beam-scan {
-    from { 
-        top: var(--beam-start-position);
-        opacity: 0;
-    }
+    from { top: var(--beam-start-position); opacity: 0; }
     2% { opacity: 1; }
     98% { opacity: 1; }
-    to { 
-        top: 100%;
-        opacity: 0;
-    }
+    to { top: 100%; opacity: 0; }
 }
 
-/* BEAM CONTACT EFFECTS - Phosphor excitation */
 .beam-contact {
     filter: blur(var(--text-beam-blur)) brightness(1.2) !important;
-    text-shadow: 
-        0 0 8px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 1.0),
-        0 0 16px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 0.8),
-        0 0 32px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 0.5) !important;
+    text-shadow: 0 0 8px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 1.0), 0 0 16px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 0.8), 0 0 32px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 0.5) !important;
     transition: all 0.08s ease-out;
 }
 
 .blink-dot.beam-contact {
     filter: blur(0px) brightness(1.5) !important;
-    box-shadow: 
-        0 0 20px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 1.0),
-        0 0 40px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 0.8) !important;
+    box-shadow: 0 0 20px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 1.0), 0 0 40px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 0.8) !important;
 }
 
 .pirate-comment.beam-contact {
     filter: blur(var(--text-beam-blur)) brightness(1.3) saturate(1.2) !important;
-    text-shadow: 
-        0 0 6px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 1.0),
-        0 0 12px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 1.0),
-        0 0 24px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 0.9),
-        0 0 40px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 0.7) !important;
+    text-shadow: 0 0 6px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 1.0), 0 0 12px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 1.0), 0 0 24px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 0.9), 0 0 40px rgba(var(--danger-r), var(--danger-g), var(--danger-b), 0.7) !important;
 }
 
 .beam-approaching {
@@ -1181,7 +927,6 @@ body {
     transition: all 0.15s ease-out;
 }
 
-/* ATMOSPHERIC PARTICLES - Drift system */
 .particle-container {
     position: fixed;
     inset: 0;
@@ -1219,37 +964,19 @@ body {
 .particle[data-layer="mid"] { z-index: 2; }
 .particle[data-layer="near"] { z-index: 3; }
 
-.particle.beam-revealed {
-    opacity: calc(var(--particle-base-opacity) * 3.5 * var(--particle-decay-multiplier)) !important;
-    transition: opacity 0.1s ease-out, filter 0.1s ease-out;
-}
-
-.particle[data-layer="far"].beam-revealed {
-    opacity: calc(var(--particle-base-opacity) * 2.5 * var(--particle-decay-multiplier)) !important;
-}
-
-.particle[data-layer="mid"].beam-revealed {
-    opacity: calc(var(--particle-base-opacity) * 4.0 * var(--particle-decay-multiplier)) !important;
-}
-
-.particle[data-layer="near"].beam-revealed {
-    opacity: calc(var(--particle-base-opacity) * 5.5 * var(--particle-decay-multiplier)) !important;
-    box-shadow: 0 0 4px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 0.6);
-}
+.particle.beam-revealed { opacity: calc(var(--particle-base-opacity) * 3.5 * var(--particle-decay-multiplier)) !important; transition: opacity 0.1s ease-out, filter 0.1s ease-out; }
+.particle[data-layer="far"].beam-revealed { opacity: calc(var(--particle-base-opacity) * 2.5 * var(--particle-decay-multiplier)) !important; }
+.particle[data-layer="mid"].beam-revealed { opacity: calc(var(--particle-base-opacity) * 4.0 * var(--particle-decay-multiplier)) !important; }
+.particle[data-layer="near"].beam-revealed { opacity: calc(var(--particle-base-opacity) * 5.5 * var(--particle-decay-multiplier)) !important; box-shadow: 0 0 4px rgba(var(--glow-r), var(--glow-g), var(--glow-b), 0.6); }
 
 </style>
 </head>
 <body>
 
 <div class="crt">
-    <div class="password-gate" id="passwordGate">
+    <div class="password-gate hidden" id="passwordGate">
         <div class="gate-title" id="gateTitle"></div>
-        <input type="text" 
-               class="membrane-input" 
-               id="passwordInput"
-               placeholder="Enter authentication sequence..."
-               autocomplete="off"
-               spellcheck="false">
+        <input type="text" class="membrane-input" id="passwordInput" placeholder="Enter authentication sequence..." autocomplete="off" spellcheck="false">
         <button class="membrane-button" id="submitBtn">SUBMIT</button>
     </div>
     
@@ -1293,13 +1020,9 @@ body {
 <script src="leak-worm-audio.js"></script>
 
 <script>
-// ==========================================
-// ORGANISM NERVOUS SYSTEM - Main controller
-// ==========================================
-
 const worm = {
     currentScreen: 0,
-    authenticated: false,
+    authenticated: true,
     totalScreens: 9,
     loadedScreens: new Set(),
     scrollObserver: null
@@ -1319,91 +1042,35 @@ function interpolateValue(start, end, progress) {
 
 function applyDecayVisuals(stage, progress) {
     const root = document.documentElement;
-    
-    let startColors, endColors;
-    let startBreathing, endBreathing;
-    let startVignette, endVignette;
-    let startScanlines, endScanlines;
-    let startTextGlow, endTextGlow;
-    let startBlur, endBlur;
-    let startFlicker, endFlicker;
+    let startColors, endColors, startBreathing, endBreathing, startVignette, endVignette, startScanlines, endScanlines, startTextGlow, endTextGlow, startBlur, endBlur, startFlicker, endFlicker;
     
     if (stage === 'healthy') {
-        startColors = CONFIG.colors.healthy;
-        endColors = CONFIG.colors.healthy;
-        startBreathing = CONFIG.breathing.healthy;
-        endBreathing = CONFIG.breathing.healthy;
-        startVignette = CONFIG.vignette.healthy;
-        endVignette = CONFIG.vignette.healthy;
-        startScanlines = CONFIG.scanlines.healthy;
-        endScanlines = CONFIG.scanlines.healthy;
-        startTextGlow = CONFIG.textShadow.healthy;
-        endTextGlow = CONFIG.textShadow.healthy;
-        startBlur = CONFIG.blur.healthy;
-        endBlur = CONFIG.blur.healthy;
-        startFlicker = CONFIG.flicker.healthy;
-        endFlicker = CONFIG.flicker.healthy;
-    } else if (stage === 'panic') {
-        startColors = CONFIG.colors.healthy;
-        endColors = CONFIG.colors.panic;
-        startBreathing = CONFIG.breathing.healthy;
-        endBreathing = CONFIG.breathing.panic;
-        startVignette = CONFIG.vignette.healthy;
-        endVignette = CONFIG.vignette.panic;
-        startScanlines = CONFIG.scanlines.healthy;
-        endScanlines = CONFIG.scanlines.panic;
-        startTextGlow = CONFIG.textShadow.healthy;
-        endTextGlow = CONFIG.textShadow.panic;
-        startBlur = CONFIG.blur.healthy;
-        endBlur = CONFIG.blur.panic;
-        startFlicker = CONFIG.flicker.healthy;
-        endFlicker = CONFIG.flicker.panic;
-    } else if (stage === 'decay') {
-        startColors = CONFIG.colors.panic;
-        endColors = CONFIG.colors.decay;
-        startBreathing = CONFIG.breathing.panic;
-        endBreathing = CONFIG.breathing.decay;
-        startVignette = CONFIG.vignette.panic;
-        endVignette = CONFIG.vignette.decay;
-        startScanlines = CONFIG.scanlines.panic;
-        endScanlines = CONFIG.scanlines.decay;
-        startTextGlow = CONFIG.textShadow.panic;
-        endTextGlow = CONFIG.textShadow.decay;
-        startBlur = CONFIG.blur.panic;
-        endBlur = CONFIG.blur.decay;
-        startFlicker = CONFIG.flicker.panic;
-        endFlicker = CONFIG.flicker.decay;
-    } else if (stage === 'death') {
-        startColors = CONFIG.colors.decay;
-        endColors = CONFIG.colors.death;
-        startBreathing = CONFIG.breathing.decay;
-        endBreathing = CONFIG.breathing.death;
-        startVignette = CONFIG.vignette.decay;
-        endVignette = CONFIG.vignette.death;
-        startScanlines = CONFIG.scanlines.decay;
-        endScanlines = CONFIG.scanlines.death;
-        startTextGlow = CONFIG.textShadow.decay;
-        endTextGlow = CONFIG.textShadow.death;
-        startBlur = CONFIG.blur.decay;
-        endBlur = CONFIG.blur.death;
-        startFlicker = CONFIG.flicker.decay;
-        endFlicker = CONFIG.flicker.death;
+        startColors = endColors = CONFIG.colors.healthy;
+        startBreathing = endBreathing = CONFIG.breathing.healthy;
+        startVignette = endVignette = CONFIG.vignette.healthy;
+        startScanlines = endScanlines = CONFIG.scanlines.healthy;
+        startTextGlow = endTextGlow = CONFIG.textShadow.healthy;
+        startBlur = endBlur = CONFIG.blur.healthy;
+        startFlicker = endFlicker = CONFIG.flicker.healthy;
     } else if (stage === 'pirate') {
-        const previousStage = decay.previousStage || 'healthy';
-        startColors = CONFIG.colors[previousStage];
-        endColors = CONFIG.colors.pirate;
-        startBreathing = CONFIG.breathing[previousStage];
-        endBreathing = CONFIG.breathing.pirate;
-        startVignette = CONFIG.vignette[previousStage];
-        endVignette = CONFIG.vignette.pirate;
-        startScanlines = CONFIG.scanlines[previousStage];
-        endScanlines = CONFIG.scanlines.pirate;
-        startTextGlow = CONFIG.textShadow[previousStage];
-        endTextGlow = CONFIG.textShadow.pirate;
-        startBlur = CONFIG.blur[previousStage];
-        endBlur = CONFIG.blur.pirate;
-        startFlicker = CONFIG.flicker[previousStage];
-        endFlicker = CONFIG.flicker.pirate;
+        const ps = decay.previousStage || 'healthy';
+        startColors = CONFIG.colors[ps]; endColors = CONFIG.colors.pirate;
+        startBreathing = CONFIG.breathing[ps]; endBreathing = CONFIG.breathing.pirate;
+        startVignette = CONFIG.vignette[ps]; endVignette = CONFIG.vignette.pirate;
+        startScanlines = CONFIG.scanlines[ps]; endScanlines = CONFIG.scanlines.pirate;
+        startTextGlow = CONFIG.textShadow[ps]; endTextGlow = CONFIG.textShadow.pirate;
+        startBlur = CONFIG.blur[ps]; endBlur = CONFIG.blur.pirate;
+        startFlicker = CONFIG.flicker[ps]; endFlicker = CONFIG.flicker.pirate;
+    } else {
+        const stages = { panic: ['healthy','panic'], decay: ['panic','decay'], death: ['decay','death'] };
+        const [s,e] = stages[stage] || ['healthy','healthy'];
+        startColors = CONFIG.colors[s]; endColors = CONFIG.colors[e];
+        startBreathing = CONFIG.breathing[s]; endBreathing = CONFIG.breathing[e];
+        startVignette = CONFIG.vignette[s]; endVignette = CONFIG.vignette[e];
+        startScanlines = CONFIG.scanlines[s]; endScanlines = CONFIG.scanlines[e];
+        startTextGlow = CONFIG.textShadow[s]; endTextGlow = CONFIG.textShadow[e];
+        startBlur = CONFIG.blur[s]; endBlur = CONFIG.blur[e];
+        startFlicker = CONFIG.flicker[s]; endFlicker = CONFIG.flicker[e];
     }
     
     const coreColor = interpolateColor(startColors.core, endColors.core, progress);
@@ -1422,41 +1089,23 @@ function applyDecayVisuals(stage, progress) {
     
     let opacityProgress = progress;
     if (stage === 'pirate') {
-        const multiplier = CONFIG.timings.pirate?.opacityMultiplier ?? 1.0;
-        opacityProgress = Math.min(progress * multiplier, 1.0);
+        opacityProgress = Math.min(progress * (CONFIG.timings.pirate?.opacityMultiplier ?? 1.0), 1.0);
     } else if (stage === 'death') {
-        const multiplier = CONFIG.timings.standard?.opacityMultiplier ?? 1.0;
-        opacityProgress = Math.min(progress * multiplier, 1.0);
+        opacityProgress = Math.min(progress * (CONFIG.timings.standard?.opacityMultiplier ?? 1.0), 1.0);
     }
     
-    const textOpacity = interpolateValue(
-        startColors.textOpacity ?? 1.0, 
-        endColors.textOpacity ?? 1.0,
-        opacityProgress
-    );
+    const textOpacity = interpolateValue(startColors.textOpacity ?? 1.0, endColors.textOpacity ?? 1.0, opacityProgress);
     root.style.setProperty('--text-opacity', textOpacity);
     root.style.setProperty('--beam-color-r', glowColor.r);
     root.style.setProperty('--beam-color-g', glowColor.g);
     root.style.setProperty('--beam-color-b', glowColor.b);
     
-    const dangerStartColors = [
-        { r: 200, g: 30, b: 30 },
-        { r: 200, g: 50, b: 40 },
-        { r: 140, g: 80, b: 50 },
-        { r: 80, g: 75, b: 70 }
-    ];
-    
+    const dangerStartColors = [{r:200,g:30,b:30},{r:200,g:50,b:40},{r:140,g:80,b:50},{r:80,g:75,b:70}];
     let dangerColor;
-    if (stage === 'healthy' || stage === 'pirate') {
-        dangerColor = dangerStartColors[0];
-    } else if (stage === 'panic') {
-        dangerColor = interpolateColor(dangerStartColors[0], dangerStartColors[1], progress);
-    } else if (stage === 'decay') {
-        dangerColor = interpolateColor(dangerStartColors[1], dangerStartColors[2], progress);
-    } else {
-        dangerColor = dangerStartColors[3];
-    }
-    
+    if (stage === 'healthy' || stage === 'pirate') dangerColor = dangerStartColors[0];
+    else if (stage === 'panic') dangerColor = interpolateColor(dangerStartColors[0], dangerStartColors[1], progress);
+    else if (stage === 'decay') dangerColor = interpolateColor(dangerStartColors[1], dangerStartColors[2], progress);
+    else dangerColor = dangerStartColors[3];
     root.style.setProperty('--danger-r', dangerColor.r);
     root.style.setProperty('--danger-g', dangerColor.g);
     root.style.setProperty('--danger-b', dangerColor.b);
@@ -1468,32 +1117,22 @@ function applyDecayVisuals(stage, progress) {
     root.style.setProperty('--breathing-opacity-min', breathMin);
     root.style.setProperty('--breathing-opacity-max', breathMax);
     
-    const vignetteRadius = interpolateValue(startVignette.radius, endVignette.radius, progress);
-    const vignetteOpacity = interpolateValue(startVignette.opacity, endVignette.opacity, progress);
-    root.style.setProperty('--vignette-radius', vignetteRadius + '%');
-    root.style.setProperty('--vignette-opacity', vignetteOpacity);
+    root.style.setProperty('--vignette-radius', interpolateValue(startVignette.radius, endVignette.radius, progress) + '%');
+    root.style.setProperty('--vignette-opacity', interpolateValue(startVignette.opacity, endVignette.opacity, progress));
+    root.style.setProperty('--scanline-opacity', interpolateValue(startScanlines.opacity, endScanlines.opacity, progress));
+    root.style.setProperty('--scanline-speed', interpolateValue(startScanlines.speed, endScanlines.speed, progress) + 's');
     
-    const scanOpacity = interpolateValue(startScanlines.opacity, endScanlines.opacity, progress);
-    const scanSpeed = interpolateValue(startScanlines.speed, endScanlines.speed, progress);
-    root.style.setProperty('--scanline-opacity', scanOpacity);
-    root.style.setProperty('--scanline-speed', scanSpeed + 's');
+    const tgs = interpolateValue(startTextGlow.spread, endTextGlow.spread, progress);
+    const tgi = interpolateValue(startTextGlow.intensity, endTextGlow.intensity, progress);
+    root.style.setProperty('--text-glow-spread', tgs + 'px');
+    root.style.setProperty('--text-glow-intensity', tgi);
+    root.style.setProperty('--pirate-glow-spread', (tgs * 1.125) + 'px');
+    root.style.setProperty('--pirate-glow-intensity', tgi * 1.33);
     
-    const textGlowSpread = interpolateValue(startTextGlow.spread, endTextGlow.spread, progress);
-    const textGlowIntensity = interpolateValue(startTextGlow.intensity, endTextGlow.intensity, progress);
-    root.style.setProperty('--text-glow-spread', textGlowSpread + 'px');
-    root.style.setProperty('--text-glow-intensity', textGlowIntensity);
-    root.style.setProperty('--pirate-glow-spread', (textGlowSpread * 1.125) + 'px');
-    root.style.setProperty('--pirate-glow-intensity', textGlowIntensity * 1.33);
-    
-    const titleBlur = interpolateValue(startBlur.title, endBlur.title, progress);
-    const textBlur = interpolateValue(startBlur.text, endBlur.text, progress);
-    root.style.setProperty('--text-title-blur', titleBlur + 'px');
-    root.style.setProperty('--text-body-blur', textBlur + 'px');
-    
-    const flickerSpeed = interpolateValue(startFlicker.speed, endFlicker.speed, progress);
-    const flickerBrightness = interpolateValue(startFlicker.brightness, endFlicker.brightness, progress);
-    root.style.setProperty('--flicker-speed', flickerSpeed + 's');
-    root.style.setProperty('--flicker-brightness', flickerBrightness);
+    root.style.setProperty('--text-title-blur', interpolateValue(startBlur.title, endBlur.title, progress) + 'px');
+    root.style.setProperty('--text-body-blur', interpolateValue(startBlur.text, endBlur.text, progress) + 'px');
+    root.style.setProperty('--flicker-speed', interpolateValue(startFlicker.speed, endFlicker.speed, progress) + 's');
+    root.style.setProperty('--flicker-brightness', interpolateValue(startFlicker.brightness, endFlicker.brightness, progress));
 }
 
 window.prepareDeathScreen = function() {
@@ -1501,13 +1140,10 @@ window.prepareDeathScreen = function() {
     const deathScreen = document.getElementById('deathScreen');
     const deathDot = document.getElementById('deathDot');
     const deathTitle = document.getElementById('deathTitle');
-    
     root.style.setProperty('--breathing-opacity-min', '0.03');
     root.style.setProperty('--breathing-opacity-max', '0.05');
     root.style.setProperty('--breathing-speed', '8s');
-    
     deathScreen.classList.add('active');
-    
     let blinkCount = 0;
     const blinkInterval = setInterval(() => {
         deathDot.style.opacity = deathDot.style.opacity === '1' ? '0' : '1';
@@ -1516,58 +1152,42 @@ window.prepareDeathScreen = function() {
             clearInterval(blinkInterval);
             deathDot.style.opacity = '0';
             setTimeout(() => {
-                const deathMessage = bookContent?.metadata?.deathMessage || 
-                    'DOCUMENTATION CLEARANCE REVOKED<span class="death-subtitle">ACCESS TERMINATED</span>';
-                deathTitle.innerHTML = deathMessage;
+                deathTitle.innerHTML = bookContent?.metadata?.deathMessage || 'DOCUMENTATION CLEARANCE REVOKED<span class="death-subtitle">ACCESS TERMINATED</span>';
                 deathTitle.style.opacity = '0';
                 setTimeout(() => {
                     deathTitle.style.transition = 'opacity 1.5s ease';
                     deathTitle.style.opacity = '1';
                     setTimeout(() => {
-                        const fadeSteps = 20;
-                        const fadeInterval = 100;
                         let currentOpacity = 0.05;
                         const targetOpacity = 0.02;
-                        const opacityStep = (currentOpacity - targetOpacity) / fadeSteps;
-                        const organismFade = setInterval(() => {
-                            currentOpacity -= opacityStep;
-                            if (currentOpacity <= targetOpacity) {
-                                currentOpacity = targetOpacity;
-                                clearInterval(organismFade);
-                            }
+                        const step = (currentOpacity - targetOpacity) / 20;
+                        const fade = setInterval(() => {
+                            currentOpacity -= step;
+                            if (currentOpacity <= targetOpacity) { currentOpacity = targetOpacity; clearInterval(fade); }
                             root.style.setProperty('--breathing-opacity-min', (currentOpacity * 0.6).toFixed(3));
                             root.style.setProperty('--breathing-opacity-max', currentOpacity.toFixed(3));
-                        }, fadeInterval);
+                        }, 100);
                     }, 200);
                 }, 100);
             }, 500);
         }
     }, 300);
-    
-    deathScreen.addEventListener('click', () => {
-        location.reload();
-    });
+    deathScreen.addEventListener('click', () => { location.reload(); });
 };
 
 function showRewardScreen() {
-    const passwordGate = document.getElementById('passwordGate');
-    if (passwordGate) passwordGate.classList.add('hidden');
-    
+    document.getElementById('passwordGate').classList.add('hidden');
     const rewardScreen = document.getElementById('rewardScreen');
     const dot = document.getElementById('rewardDot');
     const header = document.getElementById('rewardHeader');
     const title = document.getElementById('rewardTitle');
     const subtitle = document.getElementById('rewardSubtitle');
     const footerCredit = document.getElementById('footerCredit');
-    
     rewardScreen.classList.add('active');
-    
-    const colorShiftDuration = CONFIG.timings.pirate?.colorShiftDuration || 7000;
-    const fadeOutDuration = CONFIG.timings.pirate?.fadeOutDuration || 3000;
-    const opacityMultiplier = CONFIG.timings.pirate?.opacityMultiplier || 1.2;
-    const opacityFadeComplete = (colorShiftDuration / opacityMultiplier);
-    const delayUntilVisible = Math.max(0, opacityFadeComplete - fadeOutDuration);
-    
+    const csd = CONFIG.timings.pirate?.colorShiftDuration || 7000;
+    const fod = CONFIG.timings.pirate?.fadeOutDuration || 3000;
+    const om = CONFIG.timings.pirate?.opacityMultiplier || 1.2;
+    const delay = Math.max(0, (csd / om) - fod);
     setTimeout(() => {
         let blinkCount = 0;
         const blinkInterval = setInterval(() => {
@@ -1576,17 +1196,15 @@ function showRewardScreen() {
             if (blinkCount >= 6) {
                 clearInterval(blinkInterval);
                 dot.style.opacity = '0';
-                const rewardData = bookContent.screens.find(s => s.type === 'reward');
-                const metadata = rewardData?.metadata || {};
+                const metadata = (bookContent.screens.find(s => s.type === 'reward') || {}).metadata || {};
                 setTimeout(() => {
                     typewriterEffect(header, metadata.header || 'Thank you for engaging with specimen', 50, () => {
                         setTimeout(() => {
-                            typewriterEffect(title, metadata.title || 'LEAK-WORM-COMMS_v1002', 50, () => {
+                            typewriterEffect(title, metadata.title || 'ANGLERFISH_COMM_v1002', 50, () => {
                                 setTimeout(() => {
                                     typewriterEffect(subtitle, metadata.subtitle || 'Anthropic Motion Designer application', 50, () => {
                                         setTimeout(() => {
-                                            const creditText = `${metadata.footerCredit || 'C.S. & N.C.'}<br>${metadata.footerSymbol || '{🌊:🌊∈🌊}'}`;
-                                            typewriterEffect(footerCredit, creditText, 50);
+                                            typewriterEffect(footerCredit, `${metadata.footerCredit || 'C.S. & N.C.'}<br>${metadata.footerSymbol || '{🌊:🌊∈🌊}'}`, 50);
                                         }, 500);
                                     });
                                 }, 300);
@@ -1596,11 +1214,8 @@ function showRewardScreen() {
                 }, 500);
             }
         }, 300);
-    }, delayUntilVisible);
-    
-    rewardScreen.addEventListener('click', () => {
-        location.reload();
-    });
+    }, delay);
+    rewardScreen.addEventListener('click', () => { location.reload(); });
 }
 
 function typewriterEffect(element, text, speed, callback) {
@@ -1608,33 +1223,19 @@ function typewriterEffect(element, text, speed, callback) {
     let i = 0;
     const interval = setInterval(() => {
         if (i < text.length) {
-            if (text.substr(i, 4) === '<br>') {
-                element.innerHTML += '<br>';
-                i += 4;
-            } else {
-                element.innerHTML += text.charAt(i);
-                i++;
-            }
-        } else {
-            clearInterval(interval);
-            if (callback) callback();
-        }
+            if (text.substr(i, 4) === '<br>') { element.innerHTML += '<br>'; i += 4; }
+            else { element.innerHTML += text.charAt(i); i++; }
+        } else { clearInterval(interval); if (callback) callback(); }
     }, speed);
 }
 
 function startPirateMode() {
-    decay.enterPirateMode(() => {
-        showRewardScreen();
-    });
+    decay.enterPirateMode(() => { showRewardScreen(); });
 }
 
 function splitIntoSentences(text) {
     const sentences = text.match(/[^.!?]+[.!?]+["']*/g) || [text];
-    return sentences
-        .map(s => s.trim())
-        .filter(s => s.length > 0)
-        .map(s => `<span class="sentence">${s}</span>`)
-        .join(' ');
+    return sentences.map(s => s.trim()).filter(s => s.length > 0).map(s => `<span class="sentence">${s}</span>`).join(' ');
 }
 
 function processHTMLForSentences(html) {
@@ -1644,13 +1245,12 @@ function processHTMLForSentences(html) {
         if (node.nodeType === Node.TEXT_NODE) {
             const text = node.textContent.trim();
             if (text) {
-                const sentenceHTML = splitIntoSentences(text);
                 const wrapper = document.createElement('span');
-                wrapper.innerHTML = sentenceHTML;
+                wrapper.innerHTML = splitIntoSentences(text);
                 node.parentNode.replaceChild(wrapper, node);
             }
         } else if (node.nodeType === Node.ELEMENT_NODE) {
-            const inlineTags = ['span', 'strong', 'em', 'i', 'b', 'callout-text', 'equation-label', 'parenthetical', 'redacted-text', 'emphasis'];
+            const inlineTags = ['span','strong','em','i','b','callout-text','equation-label','parenthetical','redacted-text','emphasis'];
             if (!inlineTags.includes(node.tagName.toLowerCase())) {
                 Array.from(node.childNodes).forEach(child => processNode(child));
             }
@@ -1662,23 +1262,12 @@ function processHTMLForSentences(html) {
 
 function loadSingleScreen(screenId) {
     if (worm.loadedScreens.has(screenId)) return;
-    
     const screen = bookContent.screens[screenId];
     if (!screen) return;
-    
     let cleanContent = screen.content || '';
-    
-    // SURGERY 3B: Style stripping disabled — video container needs inline styles preserved
-    // cleanContent = cleanContent.replace(/style="[^"]*"/gi, '');
-    
-    cleanContent = cleanContent.replace(/<p>(.*?)<\/p>/gs, (match, content) => {
-        return `<p>${processHTMLForSentences(content)}</p>`;
-    });
-    
-    // SURGERY 3C: Detect single-screen content (Anthropic variant has only 1 content screen)
+    cleanContent = cleanContent.replace(/<p>(.*?)<\/p>/gs, (match, content) => `<p>${processHTMLForSentences(content)}</p>`);
     const isLastScreen = (screenId === 8) || (bookContent.screens.filter(s => s.type === 'content').length === 1);
     const endDot = isLastScreen ? '<div class="end-dot"><span class="blink-dot"></span></div>' : '';
-    
     const section = document.createElement('div');
     section.className = 'screen-section';
     section.dataset.screenId = screenId;
@@ -1688,111 +1277,63 @@ function loadSingleScreen(screenId) {
         <div class="screen-content">${cleanContent}</div>
         ${endDot}
     `;
-    
     const placeholder = document.querySelector(`.screen-placeholder[data-screen-id="${screenId}"]`);
-    if (placeholder) {
-        placeholder.replaceWith(section);
-    } else {
+    if (placeholder) { placeholder.replaceWith(section); }
+    else {
         const container = document.getElementById('contentDisplay');
-        const buttonsContainer = container.querySelector('.buttons-container');
-        if (buttonsContainer) {
-            buttonsContainer.before(section);
-        } else {
-            container.appendChild(section);
-        }
+        const bc = container.querySelector('.buttons-container');
+        if (bc) bc.before(section); else container.appendChild(section);
     }
-    
     worm.loadedScreens.add(screenId);
 }
 
 // ==========================================
-// ORGANISM INITIALIZATION
+// ORGANISM INITIALIZATION — GATE REMOVED
 // ==========================================
 
 document.addEventListener('DOMContentLoaded', () => {
-    const passwordInput = document.getElementById('passwordInput');
-    const submitBtn = document.getElementById('submitBtn');
-    
     if (typeof bookContent === 'undefined') { console.error('book-of-thresholds.js not loaded!'); return; }
     if (typeof CONFIG === 'undefined') { console.error('config.js not loaded!'); return; }
     if (typeof decay === 'undefined') { console.error('decay-core.js not loaded!'); return; }
     
-    const gateScreen = bookContent.screens[0];
-    if (gateScreen && gateScreen.title) {
-        document.getElementById('gateTitle').textContent = gateScreen.title;
-    }
+    if (typeof BeamModule !== 'undefined') { window.beam = new BeamModule(); window.beam.init(); }
+    if (typeof ParticleDrift !== 'undefined') { window.particles = new ParticleDrift(); window.particles.init(); }
     
-    passwordInput.focus();
+    decay.subscribe((stage, progress) => { applyDecayVisuals(stage, progress); });
     
-    if (typeof BeamModule !== 'undefined') {
-        window.beam = new BeamModule();
-        window.beam.init();
-    }
+    // GATE REMOVED — direct entry
+    document.getElementById('passwordGate').classList.add('hidden');
+    document.getElementById('pageContainer').classList.add('active');
+    document.getElementById('fadeTop').style.display = 'block';
+    document.getElementById('fadeBottom').style.display = 'block';
     
-    if (typeof ParticleDrift !== 'undefined') {
-        window.particles = new ParticleDrift();
-        window.particles.init();
-    }
+    loadSingleScreen(1);
     
-    decay.subscribe((stage, progress) => {
-        applyDecayVisuals(stage, progress);
-    });
+    const container = document.getElementById('contentDisplay');
+    const buttonsContainer = document.createElement('div');
+    buttonsContainer.className = 'buttons-container';
+    buttonsContainer.innerHTML = `<button class="membrane-button" onclick="leakDocument(event)">COMMUNICATION RECEIVED</button>`;
+    container.appendChild(buttonsContainer);
     
-    const checkPassword = () => {
-        const input = passwordInput.value.trim();
-        const correctPassword = bookContent.metadata.password;
-        
-        if (input === correctPassword) {
-            if (window.leakAudio) window.leakAudio.triggerPasswordUnlock();
-            worm.authenticated = true;
-            document.getElementById('passwordGate').classList.add('hidden');
-            document.getElementById('pageContainer').classList.add('active');
-            document.getElementById('fadeTop').style.display = 'block';
-            document.getElementById('fadeBottom').style.display = 'block';
-            
-            loadSingleScreen(1);
-            
-            const container = document.getElementById('contentDisplay');
-            const buttonsContainer = document.createElement('div');
-            buttonsContainer.className = 'buttons-container';
-            buttonsContainer.innerHTML = `
-                <button class="membrane-button" onclick="leakDocument(event)">COMMUNICATION RECEIVED</button>
-            `;
-            container.appendChild(buttonsContainer);
-            
-            const endSpacer = document.createElement('div');
-            endSpacer.style.height = '15vh';
-            container.appendChild(endSpacer);
-            
-            decay.start();
-            
-            const resetDecay = () => decay.reset();
-            document.addEventListener('scroll', resetDecay);
-            document.addEventListener('mousemove', resetDecay);
-            document.addEventListener('click', resetDecay);
-            document.addEventListener('touchstart', resetDecay);
-            document.addEventListener('keydown', resetDecay);
-        } else {
-            passwordInput.style.animation = 'shake 0.3s';
-            passwordInput.value = '';
-            setTimeout(() => { passwordInput.style.animation = ''; }, 300);
-        }
-    };
+    const endSpacer = document.createElement('div');
+    endSpacer.style.height = '15vh';
+    container.appendChild(endSpacer);
     
-    submitBtn.addEventListener('click', checkPassword);
-    passwordInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') checkPassword();
-    });
+    decay.start();
+    
+    const resetDecay = () => decay.reset();
+    document.addEventListener('scroll', resetDecay);
+    document.addEventListener('mousemove', resetDecay);
+    document.addEventListener('click', resetDecay);
+    document.addEventListener('touchstart', resetDecay);
+    document.addEventListener('keydown', resetDecay);
 });
 
 function showClipboardNotification() {
-    const notification = document.getElementById('clipboardNotification');
-    notification.style.display = 'block';
-    setTimeout(() => notification.style.opacity = '1', 10);
-    setTimeout(() => {
-        notification.style.opacity = '0';
-        setTimeout(() => notification.style.display = 'none', 300);
-    }, 2000);
+    const n = document.getElementById('clipboardNotification');
+    n.style.display = 'block';
+    setTimeout(() => n.style.opacity = '1', 10);
+    setTimeout(() => { n.style.opacity = '0'; setTimeout(() => n.style.display = 'none', 300); }, 2000);
 }
 
 function leakDocument(event) {
