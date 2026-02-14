@@ -112,7 +112,7 @@ from birth through death, though user interaction resets the decay.
 /* TERMINAL7 WAVE FONT - Sigil rendering */
 @font-face {
     font-family: 'Terminal7Wave';
-    src: url('Terminal7Wave.ttf') format('truetype');
+    src: url('Terminal7Wave-Regular.ttf') format('truetype');
 }
 
 .sigil-text {
@@ -1585,7 +1585,7 @@ function showRewardScreen() {
                                 setTimeout(() => {
                                     typewriterEffect(subtitle, metadata.subtitle || 'Anthropic Motion Designer application', 50, () => {
                                         setTimeout(() => {
-                                            const creditText = `${metadata.footerCredit || 'J.S.N.F.'}<br>${metadata.footerSymbol || '{🌊:🌊∈🌊}'}`;
+                                            const creditText = `${metadata.footerCredit || 'C.S. & N.C.'}<br>${metadata.footerSymbol || '{🌊:🌊∈🌊}'}`;
                                             typewriterEffect(footerCredit, creditText, 50);
                                         }, 500);
                                     });
@@ -1696,7 +1696,6 @@ function loadSingleScreen(screenId) {
     section.className = 'screen-section';
     section.dataset.screenId = screenId;
     section.innerHTML = `
-        <div class="title-dot"><span class="blink-dot"></span></div>
         <div class="screen-title">${screen.title || ''}</div>
         <div class="screen-subtitle">${screen.subtitle || ''}</div>
         <div class="screen-content">${cleanContent}</div>
