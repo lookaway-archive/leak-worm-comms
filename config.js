@@ -31,7 +31,7 @@ const CONFIG = {
     // STANDARD METABOLISM - Extended for video viewing
     // (Technical: 12-minute total lifespan)
     standard: {
-      healthy: 600000,  // 10min - Video viewing period
+      healthy: 420000,  // 7min - Video viewing period
       panic: 60000,     // 1min - Crisis response activation  
       decay: 30000,     // 30s - Cellular breakdown phase
       death: 30000,     // 30s - Final neural discharge
