@@ -59,7 +59,7 @@ const bookContent = {
 
         <p>≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋</p>
         
-        <p><span class="sigil-text">1234567</span></p>
+        <p><span class="sigil-text">{1:121}</span></p>
       `,
       effects: {
         pirateComments: false,
