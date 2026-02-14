@@ -15,8 +15,8 @@
  * Modification of these constants will mutate the organism's fundamental
  * nature. Handle with appropriate containment protocols.
  * 
- * The specimen exhibits a consistent 32-second lifecycle from birth
- * to natural death, allowing observers to witness complete metamorphosis.
+ * The specimen exhibits a consistent 12-minute lifecycle from birth
+ * to natural death, allowing observers to view the full application video.
  * ============================================
  */
 
@@ -28,14 +28,14 @@ const CONFIG = {
   // ==========================================
   
   timings: {
-    // STANDARD METABOLISM - Natural organism lifecycle
-    // (Technical: 32-second total lifespan everywhere)
+    // STANDARD METABOLISM - Extended for video viewing
+    // (Technical: 12-minute total lifespan)
     standard: {
-      healthy: 24000,  // 24s - Stable phosphorescence period
-      panic: 3000,     // 3s - Crisis response activation  
-      decay: 3000,     // 3s - Cellular breakdown phase
-      death: 2000,     // 2s - Final neural discharge
-      total: 32000,    // 32s - Complete lifecycle duration
+      healthy: 600000,  // 10min - Video viewing period
+      panic: 60000,     // 1min - Crisis response activation  
+      decay: 30000,     // 30s - Cellular breakdown phase
+      death: 30000,     // 30s - Final neural discharge
+      total: 720000,    // 12min - Complete lifecycle duration
       opacityMultiplier: 1.0  // Visual fade synchronization
     },
     
@@ -303,16 +303,13 @@ const CONFIG = {
 // ==========================================
 
 // RETRIEVE ACTIVE METABOLISM - Returns standard timing set
-// (Technical: Always returns the 32-second lifecycle)
+// (Technical: Always returns the 12-minute lifecycle)
 CONFIG.getCurrentTimings = function() {
   return this.timings.standard;
 };
 
 // CALCULATE TOTAL LIFESPAN - Returns organism duration
-// (Technical: Always returns 32000ms)
+// (Technical: Always returns 720000ms)
 CONFIG.getTotalLifespan = function() {
   return this.timings.standard.total;
 };
-
-// VALIDATION REMOVED - No console output in production
-// (Technical: All debug logging eliminated for sterile deployment)
