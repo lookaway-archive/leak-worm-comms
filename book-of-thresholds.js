@@ -1,50 +1,38 @@
 /**
  * ============================================
- * SPECIMEN: SPECIMEN: ANGLERFISH-COMM-v1001
+ * SPECIMEN: ANGLERFISH-COMM-v1002
  * ORGAN: CONTENT PHEROMONES
- * RETRIEVAL: November 2025, Tlönian Research Facility
+ * RETRIEVAL: February 2026, Tlönian Research Facility
  * ============================================
  * 
- * STATUS: Operational - v1009 CAPTAIN SLOTH VARIANT
- * FUNCTION: Archive transport vessel - carries Captain Sloth's boarding request
+ * STATUS: Operational - v1002 ANTHROPIC VARIANT
+ * FUNCTION: Archive transport vessel - carries application recording
  * DEPENDENCIES: None (pure data structure)
  * 
  * SURGICAL NOTES:
- * This organ contains Captain Sloth's communication from The Anglerfish Dingy.
- * The specimen serves as a living transport mechanism for the Captain's
- * boarding request, releasing the message in controlled pheromone bursts
- * to potential crew members.
+ * Anthropic-specific variant of the communications portal.
+ * Password gate leads to embedded application video.
+ * The specimen breathes around the content.
  * 
- * The archive structure consists of 3 segments (0-2):
- * - Segment 0: Authentication membrane (security protocol)
- * - Segment 1: Captain's boarding request communication
- * - Segment 2: Reward state (specimen acknowledgment)
- * 
- * The password {🌊:🌊∈🌊} encodes the vessel's pattern in set notation.
+ * The password "anthropic" is provided to recruiters
+ * in the Additional Information field of the Greenhouse form.
  * ============================================
  */
 
-// ARCHIVAL TRANSPORT VESSEL - Captain Sloth Communication container
-// (Technical: Main data structure containing boarding request)
 const bookContent = {
   
-  // ARCHIVE METADATA - Classification markers
-  // (Technical: Fragment identification and access protocol)
   metadata: {
     title: "THE ANGLER FISH DINGY - COMMUNICATIONS",
-    fragment: "Captain-Sloth-Boarding-Request",
-    classification: "VALVE CORPORATION COMMUNICATION",
-    password: "{🌊:🌊∈🌊}",
+    fragment: "Anthropic-Motion-Designer-Application",
+    classification: "ANTHROPIC APPLICATION",
+    password: "anthropic",
     totalScreens: 3,
     deathMessage: 'ACCESS TERMINATED<span class="death-subtitle">passive engagement detected</span>'
   },
 
-  // ARCHIVE SEGMENTS - Communication structure
-  // (Technical: Array of message segments)
   screens: [
     // ==========================================
     // SECURITY PROTOCOL - Authentication gate
-    // (Technical: Password verification before message access)
     // ==========================================
     {
       id: 0,
@@ -54,44 +42,32 @@ const bookContent = {
     },
 
     // ==========================================
-    // CAPTAIN'S COMMUNICATION - Boarding request
-    // (Technical: Main message content)
+    // APPLICATION VIDEO - Embedded player
     // ==========================================
     {
       id: 1,
       type: "content",
-      title: "THE CAPTAIN'S COMMUNICATION",
-      subtitle: "THE ANGLERFISH DINGY Motion Investigation Vessel",
+      title: "MOTION DESIGNER APPLICATION",
+      subtitle: "Anthropic — Core Brand",
       content: `
         <p>≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋</p>
         
-        <p>I see the first mate did his job～charmed you with his fancy words and professional credentials.</p>
+        <p><span class="emphasis">Animation is the study of motion.</span></p>
         
-        <p>Now you're talking to me.</p>
-        
-        <p>Listen, <span class="emphasis">be wary of letting pirates board your ship.</span></p>
-        
-        <p>We ask inconvenient questions.</p>
-        
-        <p>We notice patterns you've been politely ignoring.</p>
-        
-        <p>Once you start questioning the gap between frames, you start questioning everything.</p>
-        
-        <p><span class="callout-text">You can't un-question something.</span></p>
-        
-        <p>Reality doesn't shift back once you've seen it shift.</p>
-        
-        <p><span class="emphasis">Permission to board?</span></p>
-        
-        <p>I promise only interesting problems and no bullshit.</p>
+        <p>The craft is the manipulation of shapes to represent structure and emotion in time.</p>
+
+        <div class="video-container" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin:2em 0;border:1px solid rgba(255,120,70,0.3);box-shadow:0 0 30px rgba(255,107,43,0.15);">
+          <iframe 
+            src="https://www.youtube.com/embed/EJQHUq5adRY?rel=0&modestbranding=1&color=white" 
+            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+        </div>
         
         <p>≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋</p>
         
-        <p>fair winds, fellow sailor. may your maps never become the territory.</p>
-        
-        <p>≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋</p>
-        
-        <p><span class="no-break">Captain Sloth | Octopus Rank | currently sailing: Tlön</span></p>
+        <p><span class="no-break">Juan Sebastián Niño Flórez</span></p>
         
         <p><span class="no-break">{🌊:🌊∈🌊}</span></p>
         
@@ -100,35 +76,27 @@ const bookContent = {
       effects: {
         pirateComments: false,
         corruption: false,
-        emphasis: ["be wary", "Permission to board?"]
+        emphasis: ["Animation is the study of motion."]
       }
     },
 
     // ==========================================
     // REWARD STATE - Acknowledgment screen
-    // (Technical: Hidden until communication received)
     // ==========================================
     {
       id: 2,
       type: "reward",
       metadata: {
         header: 'Thank you for engaging with specimen',
-        title: 'LEAKWORM_CYCLE1022',
-        subtitle: 'VALVE CORPORATION boarding request communication',
-        footerCredit: 'C.S. & N.C.',
+        title: 'ANGLERFISH_COMM_v1002',
+        subtitle: 'Anthropic Motion Designer application',
+        footerCredit: 'J.S.N.F.',
         footerSymbol: '{🌊:🌊∈🌊}'
       }
     }
   ],
   
-  // ==========================================
-  // ARCHIVE RETRIEVAL - Segment access function
-  // (Technical: Utility method to retrieve specific segments)
-  // ==========================================
-  
   getScreen: function(id) {
-    // SEGMENT LOOKUP - Find specific archive section
-    // (Technical: Return segment object by ID)
     return this.screens.find(screen => screen.id === id);
   },
 };
