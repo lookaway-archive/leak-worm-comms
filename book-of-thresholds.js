@@ -12,10 +12,7 @@
  * SURGICAL NOTES:
  * Anthropic-specific variant of the communications portal.
  * Password gate leads to embedded application video.
- * The specimen breathes around the content.
- * 
- * The password "anthropic" is provided to recruiters
- * in the Additional Information field of the Greenhouse form.
+ * Timer extended to 12 minutes for 6-minute video viewing.
  * ============================================
  */
 
@@ -50,13 +47,9 @@ const bookContent = {
       title: "MOTION DESIGNER APPLICATION",
       subtitle: "Anthropic — Core Brand",
       content: `
-        <p>≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋</p>
-        
-        <p><span class="emphasis">Animation is the study of motion.</span></p>
-        
-        <p>The craft is the manipulation of shapes to represent structure and emotion in time.</p>
+        <p>≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋</p>
 
-        <div class="video-container" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin:2em 0;border:1px solid rgba(255,120,70,0.3);box-shadow:0 0 30px rgba(255,107,43,0.15);">
+        <div class="video-container" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin:1.5em 0;">
           <iframe 
             src="https://www.youtube.com/embed/EJQHUq5adRY?rel=0&modestbranding=1&color=white" 
             style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" 
@@ -64,10 +57,8 @@ const bookContent = {
             allowfullscreen>
           </iframe>
         </div>
-        
-        <p>≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋</p>
-        
-        <p><span class="no-break">Juan Sebastián Niño Flórez</span></p>
+
+        <p>≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋</p>
         
         <p><span class="no-break">{🌊:🌊∈🌊}</span></p>
         
@@ -76,7 +67,7 @@ const bookContent = {
       effects: {
         pirateComments: false,
         corruption: false,
-        emphasis: ["Animation is the study of motion."]
+        emphasis: []
       }
     },
 
