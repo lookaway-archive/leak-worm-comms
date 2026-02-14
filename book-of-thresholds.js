@@ -47,7 +47,7 @@ const bookContent = {
       title: "MOTION DESIGNER APPLICATION",
       subtitle: "Anthropic — Core Brand",
       content: `
-        <p>≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋</p>
+        <p>≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋</p>
 
         <div class="video-container">
           <iframe 
@@ -57,11 +57,9 @@ const bookContent = {
           </iframe>
         </div>
 
-        <p>≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋</p>
+        <p>≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋≋</p>
         
-        <p><span class="sigil-text">{🌊:🌊∈🌊}</span></p>
-        
-        <div class="end-dot"><span class="blink-dot"></span></div>
+        <p><span class="sigil-text">{1:121}</span></p>
       `,
       effects: {
         pirateComments: false,
@@ -80,7 +78,7 @@ const bookContent = {
         header: 'Thank you for engaging with specimen',
         title: 'ANGLERFISH_COMM_v1002',
         subtitle: 'Anthropic Motion Designer application',
-        footerCredit: 'J.S.N.F.',
+        footerCredit: 'C.S. & N.C.',
         footerSymbol: '{🌊:🌊∈🌊}'
       }
     }
