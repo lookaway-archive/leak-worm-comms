@@ -51,7 +51,7 @@ const bookContent = {
 
         <div class="video-container">
           <iframe 
-            src="https://www.youtube.com/embed/EJQHUq5adRY?rel=0&modestbranding=1&color=white" 
+            src="https://www.youtube.com/embed/51mmuv5aGc4?rel=0&modestbranding=1&color=white" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
             allowfullscreen>
           </iframe>
